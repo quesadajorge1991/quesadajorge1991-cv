@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Jorge Adrián Quesada Perdomo - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            padding: 2rem 1rem;
+            line-height: 1.5;
+        }
+
+        /* Contenedor principal estilo papel / tarjeta */
+        .cv-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* Cabecera con gradiente y diseño moderno */
+        .header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 2.5rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .header .title {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            border-bottom: 2px solid #3b82f6;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #e2e8f0;
+        }
+
+        .contact-bar a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-bar a:hover {
+            color: #3b82f6;
+            text-decoration: underline;
+        }
+
+        /* Grid principal: 2 columnas (sidebar + contenido) */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 0;
+        }
+
+        /* Sidebar izquierda */
+        .sidebar {
+            background: #f8fafc;
+            padding: 2rem 1.5rem;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #0f172a;
+            border-left: 4px solid #3b82f6;
+            padding-left: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-tag {
+            background: white;
+            border: 1px solid #cbd5e1;
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 0.25rem;
+            transition: all 0.2s;
+        }
+
+        .skill-tag:hover {
+            background: #3b82f6;
+            color: white;
+            border-color: #3b82f6;
+        }
+
+        .complementary-item {
+            margin-bottom: 0.6rem;
+            font-size: 0.9rem;
+        }
+
+        /* Contenido derecho */
+        .content {
+            padding: 2rem 2rem;
+        }
+
+        .job, .project, .education-item {
+            margin-bottom: 1.8rem;
+        }
+
+        .job-title, .project-title, .edu-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #0f172a;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .company, .project-sub, .edu-institution {
+            font-weight: 600;
+            color: #3b82f6;
+            font-size: 0.9rem;
+            margin: 0.25rem 0 0.5rem 0;
+        }
+
+        .date {
+            font-size: 0.75rem;
+            font-weight: normal;
+            color: #64748b;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            color: #334155;
+            margin-top: 0.5rem;
+            padding-left: 0.5rem;
+            border-left: 2px solid #e2e8f0;
+        }
+
+        .description ul {
+            list-style: none;
+            padding-left: 0.5rem;
+        }
+
+        .description li {
+            margin-bottom: 0.4rem;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .description li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+        }
+
+        hr {
+            margin: 1rem 0;
+            border: 0;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        /* Botón PDF */
+        .pdf-button {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f1f5f9;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .btn-pdf {
+            background: #0f172a;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .btn-pdf:hover {
+            background: #3b82f6;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -5px rgba(59,130,246,0.4);
+        }
+
+        /* Responsive */
+        @media (max-width: 780px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .sidebar {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            .job-title {
+                flex-direction: column;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .btn-pdf, .pdf-button {
+                display: none;
+            }
+            .cv-container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+            .sidebar {
+                background: #f8fafc;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.7rem;
+            padding: 1rem;
+            color: #94a3b8;
+            background: white;
+        }
+    </style>
+</head>
+<body>
+<div class="cv-container">
+    <div class="header">
+        <h1>Jorge Adrián Quesada Perdomo</h1>
+        <div class="title">Ingeniero Informático | Máster en Informática Aplicada</div>
+        <div class="contact-bar">
+            <span>📍 Sancti Spíritus, Cuba</span>
+            <span>📞 +53 54416943</span>
+            <span>✉️ <a href="mailto:quesadajorge1991@gmail.com">quesadajorge1991@gmail.com</a></span>
+            <span>🔗 <a href="https://github.com/quesadajorge1991" target="_blank">GitHub</a></span>
+            <span>🔗 <a href="https://www.linkedin.com/in/quesadajorge1991" target="_blank">LinkedIn</a></span>
+        </div>
+    </div>
+
+    <div class="main-grid">
+        <!-- COLUMNA IZQUIERDA: Habilidades Técnicas + Complementarias + Idiomas -->
+        <div class="sidebar">
+            <div class="section">
+                <div class="section-title">🛠️ Habilidades Técnicas</div>
+                <div>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C#</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Spring Boot</span>
+                    <span class="skill-tag">.NET Core</span>
+                    <span class="skill-tag">Razor Pages</span>
+                    <span class="skill-tag">Blazor</span>
+                    <span class="skill-tag">JPA/Hibernate</span>
+                    <span class="skill-tag">Entity Framework</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">SQL Server</span>
+                    <span class="skill-tag">Thymeleaf</span>
+                    <span class="skill-tag">Vue.js (básico)</span>
+                    <span class="skill-tag">Windows / Linux</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">🧠 Habilidades Complementarias</div>
+                <div class="complementary-item">✔ Comunicación efectiva y trabajo en equipo en entornos ágiles</div>
+                <div class="complementary-item">✔ Capacidad de adaptación tecnológica (Java Spring → .NET Core)</div>
+                <div class="complementary-item">✔ Manejo de entornos Windows y Linux</div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">🌐 Idiomas</div>
+                <div class="complementary-item"><strong>Español:</strong> Nativo</div>
+                <div class="complementary-item"><strong>Inglés:</strong> Lectura técnica avanzada</div>
+            </div>
+        </div>
+
+        <!-- COLUMNA DERECHA: Experiencia + Proyectos + Formación -->
+        <div class="content">
+            <div class="section">
+                <div class="section-title">💼 Experiencia Profesional</div>
+
+                <div class="job">
+                    <div class="job-title">
+                        Desarrollador de Software
+                        <span class="date">Enero 2022 – Actualidad</span>
+                    </div>
+                    <div class="description">
+                        <ul>
+                            <li>Desarrollo de aplicaciones web con .NET Core, Blazor y Razor Pages.</li>
+                            <li>Implementación de acceso a datos con Entity Framework y SQL Server.</li>
+                            <li>Comunicación activa y trabajo en equipo en sprints ágiles, participando en daily meetings y code reviews colaborativos.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="job">
+                    <div class="job-title">
+                        Desarrollador Java / Freelance
+                        <span class="date">2018 – 2021</span>
+                    </div>
+                    <div class="description">
+                        <ul>
+                            <li>Desarrollo de sistemas internos con Spring Boot, JPA/Hibernate, Thymeleaf y PostgreSQL.</li>
+                            <li>Integración de módulos con Vue.js en proyectos puntuales.</li>
+                            <li>Colaboración directa con clientes y otros desarrolladores para definir y entregar soluciones funcionales.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">🚀 Proyectos Destacados</div>
+
+                <div class="project">
+                    <div class="project-title">Tesis de Maestría – Informática Aplicada</div>
+                    <div class="company">Universidad Máximo Gómez Báez, Ciego de Ávila</div>
+                    <div class="description">
+                        Aplicación web con <strong>Spring Boot, JPA/Hibernate, PostgreSQL y Thymeleaf</strong>.
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-title">Tesis de Ingeniería Informática</div>
+                    <div class="description">
+                        Sistema desarrollado con <strong>Java, JPA Hibernate, Java Server Faces (JSF) y PostgreSQL</strong>.
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="section-title">🎓 Formación Académica</div>
+
+                <div class="education-item">
+                    <div class="job-title">Maestría en Informática Aplicada <span class="date">2019 – 2023</span></div>
+                    <div class="company">Universidad Máximo Gómez Báez, Ciego de Ávila</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="job-title">Ingeniería Informática <span class="date">2012 – 2017</span></div>
+                    <div class="company">Universidad Máximo Gómez Báez, Ciego de Ávila</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pdf-button">
+        <button class="btn-pdf" onclick="window.print();">📄 Descargar / Guardar como PDF</button>
+        <p style="font-size:0.7rem; margin-top:0.8rem; color:#475569;">Usa "Guardar como PDF" en el diálogo de impresión.</p>
+    </div>
+    <footer>
+        Jorge Adrián Quesada Perdomo · Actualizado 2026 · CV online
+    </footer>
+</div>
+</body>
+</html>
