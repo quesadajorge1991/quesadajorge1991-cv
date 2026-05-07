@@ -1,6 +1,6 @@
 # Jorge Adrián Quesada Perdomo - Currículum Vitae
 
-[![GitHub Pages](https://img.shields.io/badge/🌐-Ver%20CV%20Online-blue?style=for-the-badge&logo=github)](https://TU-USUARIO.github.io/jorge-quesada-cv/)
+[![GitHub Pages](https://img.shields.io/badge/🌐-Ver%20CV%20Online-blue?style=for-the-badge&logo=github)](https://quesadajorge1991.github.io/quesadajorge1991-cv/)
 [![PDF](https://img.shields.io/badge/📄-Descargar%20PDF-red?style=for-the-badge&logo=adobeacrobatreader)](https://TU-USUARIO.github.io/jorge-quesada-cv/)
 
 > **Ingeniero Informático | Máster en Informática Aplicada**
