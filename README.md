@@ -47,7 +47,7 @@ Este repositorio contiene mi currículum vitae profesional, desarrollado como un
 
 | Plataforma | Enlace |
 |------------|--------|
-| 🌐 **CV Online** | [https://TU-USUARIO.github.io/jorge-quesada-cv/](https://TU-USUARIO.github.io/jorge-quesada-cv/) |
+| 🌐 **CV Online** | [https://quesadajorge1991.github.io/quesadajorge1991-cv/](https://quesadajorge1991.github.io/quesadajorge1991-cv/) |
 | 💻 **GitHub** | [github.com/quesadajorge1991](https://github.com/quesadajorge1991) |
 | 🔗 **LinkedIn** | [linkedin.com/in/quesadajorge1991](https://linkedin.com/in/quesadajorge1991) |
 | 📧 **Email** | quesadajorge1991@gmail.com |
